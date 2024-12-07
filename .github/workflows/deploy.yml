@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout el código
+      # 1. Descargar el código del repositorio
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4. Compilar tu proyecto
+      # 4. Compilar el proyecto
       - name: Build the project
         run: npm run start
 
