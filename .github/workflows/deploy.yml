@@ -28,12 +28,9 @@ jobs:
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
+          npm run compile
           npm run build
 
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'Fortanpeg/build/'
 
   deploy:
     needs: build_site
